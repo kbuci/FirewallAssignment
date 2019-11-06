@@ -25,6 +25,9 @@ sorted them after reading the whole file, and used binary search to
 find ranges that included the packet value (in accept_packet() ), as opposed
 to iterating through the whole array every time.
 
+policy.py and firewall.py contain the code for creating the array of ranges and setting up the firewall, respectively
+run_firewall.py was used for testing
+
 Testing, Refinements, possible optimizations
 
 Due to spending a lot of the alloted time exploring alternate approaches
