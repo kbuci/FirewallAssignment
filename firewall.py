@@ -15,7 +15,6 @@ class Firewall():
         # in the csv, and should be accepted
         ip_address = self._create_ip_address(ip_address_string)
         port_range = self.port_policies[(direction,protocol)] 
-        print(direction,protocol, port, ip_address)
         ip_range = self.ip_policies[(direction,protocol)]
         ip_policies = ip_range.find_all(ip_address)
         port_policies = port_range.find_all(port)
