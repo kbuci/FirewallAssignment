@@ -38,7 +38,7 @@ class Firewall():
     def _update_policy(self, policy_id, direction, protocol, ports, ip_addresses):
         # Based on the direction and protocol, find the corresponding
         # IP and Port ranges, and insert the new ip range and port range in them
-        # This will create a new range of valid ip addresses in ip policy array, and a 
+        # This will add a new range of valid ip addresses in ip policy array, and a 
         # new range of valid ports in the port policy array 
         lower_port, higher_port = ports
         lower_address, higher_address = ip_addresses
@@ -52,7 +52,7 @@ class Firewall():
     def _init_policy(self):
         # Create space for the Policy arrays for port and ip ranges, 
         # for every combination of direction and protocol, and initalize
-        # a policy range
+        # a PolicyRange array
         self.port_policies = {}
         self.ip_policies = {}
         for direction in Firewall.DIRECTIONS:
