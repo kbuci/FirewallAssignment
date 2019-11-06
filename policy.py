@@ -47,10 +47,8 @@ class PolicyRange:
             self._update()
 
         left = self._find_value_range(target)
-        print("f",left)
         found_ids = set()
         for allowed in self.ranges[left:]:
-            print(target, allowed)
             if allowed.lower <= target <= allowed.higher:
                 found_ids.add(allowed.id)
             else:
